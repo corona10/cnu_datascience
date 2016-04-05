@@ -7,6 +7,7 @@ txt <- readLines("pledges.txt")
 pledge <- sapply(txt, extractNoun, USE.NAMES = F)
 head(unlist(pledge), 30)
 c <- unlist(pledge)
+# 선거 공약 데이터를 가져와 적당히 후처리 후 워드클라우딩을 한다
 pledge_list <- Filter(function(x){nchar(x) >= 2}, c)
 pledge_list <- gsub("\\d+",pledge_list)
 pledge_list <- gsub("공약",pledge_list)
