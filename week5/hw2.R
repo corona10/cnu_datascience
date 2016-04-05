@@ -5,4 +5,4 @@ loc <- read.csv("toy_lib.csv",header=T)
 head(loc)
 kor <- get_map("seoul", zoom=11, maptype = "roadmap") # 지도를 가져온다.
 kor.map<-ggmap(kor)+geom_point(data=loc,aes(x=LONGITUDE,y=LATITUDE),size=3,alpha=0.7)
-kor.map + geom_text(data=loc, aes(x = LONGITUDE, y = LATITUDE+0.01, label=LIB_NM),size=2)
+kor.map + geom_text(data=loc, aes(x = LONGITUDE, y = LATITUDE+0.01, label=LIB_NM),size=2.5)
