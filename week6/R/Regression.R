@@ -1,0 +1,8 @@
+setwd('/Users/corona10/cnu_datascience/week6/R')
+average_heart_beat_per_steps <- read.csv('average_heart_beat_per_steps.csv', sep=',')
+average_heart_beat_per_steps_with_status <- read.csv('average_heart_beat_per_steps_with_status.csv', sep = ',')
+test_average_heart_beat_per_steps <- read.csv('test_average_heart_beat_per_steps.csv', sep=',')
+test_average_heart_beat_per_steps_with_status <- read.csv('test_average_heart_beat_per_steps_with_status.csv', sep = ',')
+plot(x= average_heart_beat_per_steps$steps, y = average_heart_beat_per_steps$heart_beat)
+r <- lm(average_heart_beat_per_steps$heart_beat ~ average_heart_beat_per_steps$steps )
+abline(r)

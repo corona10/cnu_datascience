@@ -13,12 +13,11 @@ $(document).ready(function () {
     //circleColor: use @default
     data: {
       items: [
-        {text: "최대 심박수", count: "146"},
-        {text: "평균 걸음수", count: "477"},
-        {text: "최소 심박수", count: "170"},
-        {text: "평균 심박수", count: "123"},
-        {text: "시간 당 최대 걸음 수", count: "2413"},
-        {text: "총 걸음 수", count: "11416"},
+        {text: "최대 심박수", count: "175"},
+        {text: "최소 심박수", count: "49"},
+        {text: "평균 심박수", count: "80"},
+        {text: "최대 걸음 수", count: "159"},
+        {text: "총 걸음 수", count: "125928"},
         {text: "최소 걸음수", count: "0"},
       ],
       eval: function (item) {return item.count/10;},
