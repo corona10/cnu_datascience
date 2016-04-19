@@ -4,6 +4,7 @@ from urllib import urlencode
 from bs4 import BeautifulSoup
 import codecs
 
+## 네이버 API를 호출하기 위한 기본 세팅
 clientID = 'cu3NbgMxKj9IEYPdjncH'
 clientSecret = 'V85AQbB043'
 
@@ -13,12 +14,16 @@ start = 1
 
 params = {'query': keyword.encode('utf8'), 'display': display, 'start': start}
 params = urlencode(params)
-print params
+
+# 네이버 API를 호출하기 위해 헤더값에
+# 'X-Naver-Client-Id'과 'X-Naver-Client-Secret'를 부여한다
 uri = "https://openapi.naver.com/v1/search/news.xml?" + params
 req = urllib2.Request(uri)
 req.add_header('X-Naver-Client-Id', clientID)
 req.add_header('X-Naver-Client-Secret', clientSecret)
 
+# 결과값이 오면 Response값을 파싱한다
+# 이 때 불필요한 HTML 문법은 제거한다
 response = urllib2.urlopen(req)
 data = BeautifulSoup(response, "html.parser")
 data_file = codecs.open('data.txt', 'w', 'utf-8')
