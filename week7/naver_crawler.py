@@ -5,8 +5,8 @@ from bs4 import BeautifulSoup
 import codecs
 
 ## 네이버 API를 호출하기 위한 기본 세팅
-clientID = 'cu3NbgMxKj9IEYPdjncH'
-clientSecret = 'V85AQbB043'
+clientID = 'id'
+clientSecret = 'secret'
 
 keyword = u'미세먼지'
 display = 100
